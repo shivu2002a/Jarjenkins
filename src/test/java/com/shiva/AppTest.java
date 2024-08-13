@@ -15,6 +15,7 @@ public class AppTest {
     @Test
     public void shouldAnswerWithTrue() {
         App ap = new App();
+        
         assertEquals("Hello world !!", ap.getGreeting());
     }
 }
