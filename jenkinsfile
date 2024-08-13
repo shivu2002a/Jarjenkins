@@ -1,0 +1,18 @@
+pipeline {
+    agent any 
+    environment {
+        PATH = "C:/Users/e039326/Downloads/Softwares/apache-maven-3.9.8-bin/apache-maven-3.9.8/bin;${env.PATH}"
+    }
+    stages {
+        stage("Pull") {
+            steps {
+                git "https://github.com/shivu2002a/jarjenkins.git"
+            }
+        }
+        stage("Testing") {
+            steps {
+                bat "mvn test"
+            }
+        }
+    }
+}
